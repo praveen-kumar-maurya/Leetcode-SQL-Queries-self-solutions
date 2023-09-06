@@ -13,7 +13,7 @@ FROM cte
 GROUP BY machine_id;
 */
 
-
+# using self join
 SELECT a1.machine_id AS machine_id, ROUND(avg(a2.timestamp - a1.timestamp),3) AS processing_time
 FROM activity a1
 JOIN activity a2
