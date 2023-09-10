@@ -10,5 +10,4 @@ SELECT c.product_id AS product_id, c.year AS first_year, c.quantity AS quantity,
 FROM cte c
 LEFT JOIN product p
 ON c.product_id = p.product_id
-WHERE c.rn = 1
-#GROUP BY product_id,first_year;
+WHERE c.rn = 1;
