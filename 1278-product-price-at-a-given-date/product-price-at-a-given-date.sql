@@ -13,7 +13,7 @@ WHERE max_change_date = change_date
 
 UNION
 
-SELECT p.product_id AS product_id, CAST('10' as SIGNED) AS price
+SELECT p.product_id AS product_id, 10 AS price
 FROM cte c
 RIGHT JOIN products p
 ON c.product_id = p.product_id
