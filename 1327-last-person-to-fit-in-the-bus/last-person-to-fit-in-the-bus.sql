@@ -6,7 +6,7 @@ FROM queue
 )
 
 SELECT person_name
-FROM queue
+FROM cte
 WHERE person_id NOT IN 
 (
 SELECT COALESCE(person_id, 0)
