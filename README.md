@@ -1,2 +1,2 @@
-# Leetcode-SQL-Queries-self-solutions
+# Leetcode-MySQL-Queries-self-solutions
 My Leetcode solutions submissions
