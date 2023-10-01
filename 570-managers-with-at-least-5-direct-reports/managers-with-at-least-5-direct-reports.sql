@@ -11,6 +11,8 @@ FROM
 ) a
 WHERE a.direct_reports >= 5;
 */
+
+/* Can also be done like this */
 WITH cte AS
 (
   SELECT e1.id,e1.name AS name, COUNT(e1.id) AS direct_reports
