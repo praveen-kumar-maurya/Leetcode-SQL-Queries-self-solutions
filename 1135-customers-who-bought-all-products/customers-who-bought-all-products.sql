@@ -1,4 +1,5 @@
 # Write your MySQL query statement below
+/*
 WITH cte AS
 (
 SELECT *,COUNT(DISTINCT product_key) as count_products
@@ -16,3 +17,24 @@ INNER JOIN product p
 ON c.product_key = p.product_key
 ) AS x
 WHERE x.flag = 1;
+*/
+
+SELECT customer_id
+FROM customer c
+INNER JOIN product p
+ON c.product_key = p.product_key
+GROUP BY customer_id
+HAVING COUNT(DISTINCT c.product_key) = (SELECT COUNT(product_key) FROM product )
+
+
+/*
+SELECT customer_id
+FROM 
+(SELECT customer_id,COUNT(DISTINCT c.product_key) AS count
+FROM customer c
+INNER JOIN product p
+ON c.product_key = p.product_key
+GROUP BY customer_id
+) AS x
+WHERE x.count = (SELECT COUNT(product_key) FROM product )
+*/
