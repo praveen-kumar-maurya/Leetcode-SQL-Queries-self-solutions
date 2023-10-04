@@ -8,6 +8,6 @@ FROM sales s
 
 SELECT c.product_id AS product_id, c.year AS first_year, c.quantity AS quantity,c.price AS price
 FROM cte c
-LEFT JOIN product p
+INNER JOIN product p
 ON c.product_id = p.product_id
 WHERE c.rn = 1;
