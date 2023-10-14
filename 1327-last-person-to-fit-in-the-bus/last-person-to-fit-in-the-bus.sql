@@ -9,7 +9,7 @@ SELECT person_name
 FROM cte
 WHERE person_id NOT IN 
 (
-SELECT COALESCE(person_id, 0)
+SELECT COALESCE(person_id,0)
 FROM cte
 WHERE total_weight > 1000
 ) 
