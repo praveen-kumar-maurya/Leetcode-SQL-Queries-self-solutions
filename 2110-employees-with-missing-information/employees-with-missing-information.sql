@@ -1,5 +1,5 @@
 # Write your MySQL query statement below
-
+# Approach -1 (Using union)
 SELECT employee_id
 FROM employees
 WHERE employee_id NOT IN 
@@ -23,10 +23,3 @@ ON e.employee_id = s.employee_id
 )
 ORDER BY employee_id;
 
-/*
-SELECT e.employee_id as 
-FROM employees e
-FULL OUTER JOIN salaries s
-ON e.employee_id = s.employee_id
-WHERE s.name IS NULL OR e.salary IS NULL;
-*/
